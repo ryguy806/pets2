@@ -1,0 +1,12 @@
+{
+  "name": "rguelzo/328/pets2",
+  "authors": [
+    {
+      "name": "Ryan Guelzo",
+      "email": "rguelzo@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
