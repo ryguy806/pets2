@@ -67,6 +67,28 @@ $f3->route('GET /@animal', function ($f3, $params) {
 
 });
 
+$f3->route('GET /order', function () {
+
+    $view = new Template();
+    echo $view->render('views/form1.html');
+});
+
+$f3->route('POST /order2', function () {
+
+    $_SESSION['animalName'] = $_POST['animalName'];
+
+    $view = new Template();
+    echo $view->render('views/form2.html');
+});
+
+$f3->route('POST /results', function () {
+
+    $_SESSION['color'] = $_POST['color'];
+
+    $view = new Template();
+    echo $view->render('views/results.html');
+});
+
 
 
 //Run fat-free
