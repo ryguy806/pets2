@@ -2,7 +2,7 @@
 
 
 /**
- * Index page for the pets2 file.
+ * Index page for the pet3 file.
  * User: Ryan Guelzo
  * Date: 04/15/19
  */
@@ -19,6 +19,7 @@ require_once('vendor/autoload.php');
 
 //Creates the instance of the base class
 $f3 = Base::instance();
+$f3->set('colors', array('pink','green','blue'));
 
 //Specified the default route
 $f3->route('GET /', function () {
