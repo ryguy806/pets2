@@ -10,6 +10,11 @@
             <input type="text" name='animalName' id="animal">
         </label><br>
         <input type="submit" value="Next">
+        <span>
+            <check if="isset(@errors['animal']")>
+                <true>{{@errors['animal']}}</true>
+            </check>
+        </span>
     </form>
 </body>
 </html>
