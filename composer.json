@@ -5,6 +5,10 @@
       "name": "Ryan Guelzo",
       "email": "rguelzo@mail.greenriver.edu"
     }
+    {
+      "name": "Michael Britt",
+      "email": "mbritt3@mail.greenriver.edu"
+    }
   ],
   "require": {
     "bcosca/fatfree-core": "dev-master"
