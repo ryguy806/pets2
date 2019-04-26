@@ -16,6 +16,7 @@ error_reporting(E_ALL);
 
 //Require the autoload
 require_once('vendor/autoload.php');
+require_once('model/validation-functions.php');
 
 //Creates the instance of the base class
 $f3 = Base::instance();
@@ -24,7 +25,17 @@ $f3->set('colors', array('pink','green','blue'));
 $f3->set('DEBUG', 3);
 
 //Specified the default route
-$f3->route('GET /', function () {
+$f3->route('GET /', function ($f3) {
+
+    session_destroy();
+
+    if(isset($_POST['animalName']) && validString($_POST['animalName'])){
+        $_SESSION['animalName'] = $_POST['animalName'];
+        $f3->reroute('/order2');
+    } else {
+        $f3->set("errors['animal']", "Please enter an animal.");
+    }
+
 
     echo '<h1>My Pets</h1>';
     echo '<a href="order">Order a Pet</a>';

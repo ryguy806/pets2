@@ -1,3 +1,4 @@
+<?php
 function validColor($color)
 {
     global $f3;
@@ -6,7 +7,7 @@ function validColor($color)
 
 function validString($string)
 {
-    if($string!="" && ctype_alpha($string)
+    if($string!="" && ctype_alpha($string))
     {
         return true;
     }
