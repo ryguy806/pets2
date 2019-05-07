@@ -5,9 +5,9 @@
     <title>Form 2</title>
 </head>
 <body>
-    <form method="post" action="#">
-        <check if="{{isset(@errors['color']}}">
-            <p>{{@errors['color'}}</p>
+    <form method="post" action="">
+        <check if="isset(@errors['color'])">
+            <true>{{@errors['color']}}</true>
         </check>
         <label for="color">Color
         <select id="color" name="color">
